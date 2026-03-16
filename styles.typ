@@ -34,7 +34,11 @@
     align(center, text(it, font: font_type.黑体, size: font_size.小二))
   }
   set text(font: font_type.宋体, size: font_size.小四)
-  set par(first-line-indent: 2em, leading: (20pt - font_size.小四) * 1.265, spacing: (20pt - font_size.小四) * 1.265)
+  set par(
+    first-line-indent: (amount: 2em, all: true),
+    leading: (20pt - font_size.小四) * 1.265,
+    spacing: (20pt - font_size.小四) * 1.265,
+  )
 
   body
 }
