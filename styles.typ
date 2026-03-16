@@ -1,6 +1,27 @@
+#import "config.typ": *
 #import "utils.typ": font_size, font_type
+#import "@preview/hydra:0.6.2": hydra
 
 #let template(body) = {
+  set page(
+    header: context {
+      if counter(page).get().first() >= 1 {
+        grid(
+          columns: (1fr, 1fr),
+          align(left, title), align(right, hydra(1, skip-starting: false)),
+        )
+        line(length: 100%, stroke: 0.5pt)
+      }
+    },
+    footer: context {
+      let page-num = counter(page).display(here().page-numbering())
+      if counter(page).get().first() >= 1 {
+        align(center, page-num)
+      }
+    },
+  )
+  set page(numbering: "I")
+
   set heading(numbering: (..n) => {
     let pos = n.pos()
     if pos.len() == 1 {

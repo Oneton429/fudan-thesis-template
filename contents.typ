@@ -19,12 +19,13 @@
   v(12pt)
 }
 
+#show heading: it => {
+  it
+  v(22pt)
+}
 
 #outline(
-  title: [
-    目　录
-    #v(22pt)
-  ],
+  title: "目　录",
   depth: 3,
 )
 

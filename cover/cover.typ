@@ -1,5 +1,6 @@
 #import "../config.typ": *
 #import "../utils.typ": font_size
+#counter(page).update(0)
 #set document(
   author: author,
   date: date,
@@ -9,6 +10,7 @@
 #set page(margin: (top: 2.54cm, bottom: 2.54cm, left: 3.18cm, right: 3.18cm))
 #set par(spacing: 0.2em)
 #set text(top-edge: "ascender", bottom-edge: "descender")
+
 
 #v(35pt)
 #image(

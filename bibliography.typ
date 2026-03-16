@@ -2,7 +2,12 @@
 
 #pagebreak(weak: true)
 
-#show heading: set block(below: 22pt)
+#show heading: it => {
+  it
+  if it.body == [参考文献] {
+    v(22pt)
+  }
+}
 
 #bibliography(
   "reference.bib",
