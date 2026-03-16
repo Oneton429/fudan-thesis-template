@@ -17,3 +17,15 @@
   七号: 5.5pt,
   小七: 5pt,
 )
+
+#let font_type = (
+  仿宋: ((name: "Times New Roman", covers: "latin-in-cjk"), "FangSong"),
+  宋体: ((name: "Times New Roman", covers: "latin-in-cjk"), "SimSun-ExtG"),
+  黑体: ((name: "Times New Roman", covers: "latin-in-cjk"), "SimHei"),
+  楷体: ((name: "Times New Roman", covers: "latin-in-cjk"), "KaiTi"),
+  代码: (
+    (name: "New Computer Modern Mono", covers: "latin-in-cjk"),
+    "Times New Roman",
+    "SimSun",
+  ),
+)
