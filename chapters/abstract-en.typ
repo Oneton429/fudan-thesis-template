@@ -4,7 +4,7 @@
 
 #pagebreak(weak: true)
 
-#heading("Abstart", numbering: none)
+#heading("ABSTRACT", numbering: none)
 
 This is the English abstract section.
 
