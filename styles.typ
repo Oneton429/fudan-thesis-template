@@ -1,6 +1,7 @@
 #import "config.typ": *
 #import "utils.typ": font_size, font_type
 #import "@preview/hydra:0.6.2": hydra
+#import "@preview/zh-format:0.1.0": zh-format
 
 #let template(body) = {
   // 页眉与页码
@@ -32,9 +33,8 @@
       pos.map(str).join(".")
     }
   })
-  show heading.where(level: 1): it => {
-    align(center, text(it, font: font_type.黑体, size: font_size.小二))
-  }
+  show heading.where(level: 1): set text(font: font_type.黑体, size: font_size.小二, weight: "regular")
+  show heading.where(level: 1): it => align(center, it)
 
   // 图表
   show figure.where(kind: table): set figure.caption(position: top)
@@ -125,5 +125,6 @@
     spacing: (20pt - font_size.小四) * 1.265,
   )
 
+  show: zh-format
   body
 }

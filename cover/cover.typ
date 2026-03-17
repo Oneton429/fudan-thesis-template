@@ -1,5 +1,5 @@
 #import "../config.typ": *
-#import "../utils.typ": font_size
+#import "../utils.typ": font_size, font_type
 #counter(page).update(0)
 #set document(
   author: author,
@@ -19,7 +19,7 @@
 )
 #text(
   "本科毕业论文（设计）",
-  font: "SimHei",
+  font: font_type.黑体,
   size: 35pt,
 )
 #image("badge.jpg")
@@ -28,7 +28,7 @@
 #v(88pt)
 #align(center)[
   #block(width: 400pt)[
-    #set text(font: "SimHei", size: font_size.小三)
+    #set text(font: font_type.黑体, size: font_size.小三)
     #set par(first-line-indent: 0.75em)
 
     #grid(
@@ -36,7 +36,7 @@
       row-gutter: 1.05em,
       align: left,
 
-      grid.cell(colspan: 2)[论文题目：#title],
+      grid.cell(colspan: 2)[论文题目：#text(title, size: font_size.小二, weight: "bold")],
       grid.cell(colspan: 2)[],
       grid.cell(colspan: 2)[],
 
