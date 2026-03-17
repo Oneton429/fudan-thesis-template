@@ -9,7 +9,7 @@
     header: context {
       if counter(page).get().first() >= 1 {
         grid(
-          columns: (1fr, 1fr),
+          columns: (1fr, auto),
           align(left, title), align(right, hydra(1, skip-starting: false)),
         )
         line(length: 100%, stroke: 0.5pt)
