@@ -34,7 +34,6 @@ typst compile main.typ  # 生成 PDF 文档
 
 ## 🛠 Project Roadmap (Todo)
 
-- [ ] 图、表格式
 - [ ] 中英文摘要
 - [ ] 致谢
 
