@@ -32,11 +32,6 @@ typst watch main.typ    # 开启实时预览
 typst compile main.typ  # 生成 PDF 文档
 ```
 
-## 🛠 Project Roadmap (Todo)
-
-- [ ] 中英文摘要
-- [ ] 致谢
-
 ## 🤝 贡献与反馈
 
 如果您在使用过程中发现任何格式偏差或功能建议，欢迎提交 Issue 或 Pull Request。

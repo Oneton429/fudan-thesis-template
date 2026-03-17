@@ -3,6 +3,8 @@
 
 #include "cover/cover.typ"
 #include "contents.typ"
+#include "chapters/abstract-zh.typ"
+#include "chapters/abstract-en.typ"
 #set page(numbering: "1")
 #counter(page).update(1)
 
@@ -11,3 +13,4 @@
 }
 
 #include "bibliography.typ"
+#include "chapters/acknowledgments.typ"
