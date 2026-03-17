@@ -22,7 +22,13 @@
   #image("../cover/badge.jpg")
 ]
 
-如遇表格标题与表格内容完全分开的情况，请手动插入 `#pagebreak(weak: true)`来将标题换页至下一页。
+如遇表格标题与表格内容完全分开的情况，请手动插入
+
+```typst
+#pagebreak(weak: true)
+```
+
+来将标题换页至下一页。
 
 #figure(caption: "测试表格")[
   #table(

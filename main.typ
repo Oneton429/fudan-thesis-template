@@ -8,7 +8,7 @@
 #set page(numbering: "1")
 #counter(page).update(1)
 
-#for chapter_id in range(1, 5) {
+#for chapter_id in range(1, 6) {
   include "chapters/" + numbering("01", chapter_id) + ".typ"
 }
 

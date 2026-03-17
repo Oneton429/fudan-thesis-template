@@ -24,6 +24,23 @@
   )
   set page(numbering: "I")
 
+  // 按章编号
+  set figure(numbering: n => context {
+    let chapter = counter(heading.where(level: 1)).get().first()
+    if chapter > 0 {
+      str(chapter) + "-" + str(n)
+    } else {
+      str(n)
+    }
+  })
+  set math.equation(numbering: n => context {
+    let chapter = counter(heading.where(level: 1)).get().first()
+    if chapter > 0 {
+      "(" + str(chapter) + "-" + str(n) + ")"
+    } else {
+      "(" + str(n) + ")"
+    }
+  })
   // 标题
   set heading(numbering: (..n) => {
     let pos = n.pos()
@@ -34,15 +51,21 @@
     }
   })
   show heading.where(level: 1): set text(font: font_type.黑体, size: font_size.小二, weight: "regular")
-  show heading.where(level: 1): it => align(center, it)
+  show heading.where(level: 1): it => {
+    counter(figure.where(kind: image)).update(0)
+    counter(figure.where(kind: table)).update(0)
+    counter(figure.where(kind: raw)).update(0)
+    counter(math.equation).update(0)
+    align(center, it)
+  }
 
   // 图表
   show figure.where(kind: table): set figure.caption(position: top)
   show figure.where(kind: table): set block(breakable: true)
   set figure.caption(separator: "　")
+  show table: set math.equation(numbering: none)
   let table-starts = state("table-starts", (:))
   let sys-table-counter = counter("sys-table-counter")
-
   show table: it => {
     if it.children.len() > 0 and it.children.last().func() == table.hline {
       return it
