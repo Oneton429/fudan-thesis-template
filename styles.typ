@@ -48,10 +48,17 @@
       return it
     }
 
+    let original-args = (:)
+    for (k, v) in it.fields() {
+      if k not in ("children", "stroke") {
+        original-args.insert(k, v)
+      }
+    }
     let has-header = it.children.any(c => c.func() == table.header)
     if not has-header {
       return table(
-        columns: it.columns, stroke: none, align: center + horizon,
+        ..original-args,
+        stroke: none,
         table.hline(stroke: 1pt), ..it.children, table.hline(stroke: 1pt)
       )
     }
@@ -96,12 +103,6 @@
         ))
       } else {
         new-children.push(child)
-      }
-    }
-    let original-args = (:)
-    for (k, v) in it.fields() {
-      if k not in ("children", "stroke") {
-        original-args.insert(k, v)
       }
     }
     (
