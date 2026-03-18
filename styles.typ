@@ -41,6 +41,7 @@
       "(" + str(n) + ")"
     }
   })
+
   // 标题
   set heading(numbering: (..n) => {
     let pos = n.pos()
@@ -57,6 +58,10 @@
     counter(figure.where(kind: raw)).update(0)
     counter(math.equation).update(0)
     align(center, it)
+  }
+  show heading.where(numbering: none): it => {
+    it
+    v(22pt)
   }
 
   // 图表
