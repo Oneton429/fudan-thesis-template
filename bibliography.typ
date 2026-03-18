@@ -5,5 +5,5 @@
 #bibliography(
   "reference.bib",
   title: "参考文献",
-  style: "gb-7714-2005-numeric",
+  style: "gb-7714-2015-numeric",
 )
