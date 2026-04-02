@@ -53,6 +53,7 @@
   })
   show heading.where(level: 1): set text(font: font_type.黑体, size: font_size.小二, weight: "regular")
   show heading.where(level: 1): it => {
+    pagebreak(weak: true)
     counter(figure.where(kind: image)).update(0)
     counter(figure.where(kind: table)).update(0)
     counter(figure.where(kind: raw)).update(0)
