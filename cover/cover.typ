@@ -1,5 +1,7 @@
 #import "../config.typ": *
-#import "../utils.typ": font_size, font_type
+#import "../utils.typ": font_size
+#import "@preview/cuti:0.4.0": show-fakebold
+#show: show-fakebold
 #counter(page).update(0)
 #set document(
   author: author,
@@ -19,7 +21,7 @@
 )
 #text(
   "本科毕业论文（设计）",
-  font: font_type.黑体,
+  font: "SimHei",
   size: 35pt,
 )
 #image("badge.jpg")
@@ -28,7 +30,7 @@
 #v(88pt)
 #align(center)[
   #block(width: 400pt)[
-    #set text(font: font_type.黑体, size: font_size.小三)
+    #set text(font: "SimHei", size: font_size.小三)
     #set par(first-line-indent: 0.75em)
 
     #grid(
@@ -48,6 +50,84 @@
       grid.cell(
         colspan: 2,
       )[完成日期：　　　　#date.display("[year] 年 [month padding:none] 月 [day padding:none] 日")],
+    )
+  ]
+]
+
+#pagebreak(weak: true)
+
+#align(center)[
+  #block(width: 16.31cm)[
+    #table(
+      columns: (1fr, 1fr, 1fr, 1fr),
+      rows: (6.51cm, 12.68cm, 1.22cm, 1.93cm),
+      inset: (x: 5pt, y: 10pt),
+      stroke: 0.5pt,
+      align: left + top,
+      table.cell(colspan: 4)[
+        #text("指导教师对论文学术规范的审查意见：", font: "SimHei", size: font_size.小三)
+
+        #v(12pt)
+
+        　 　#text("☐ 本人经过尽职审查，未发现毕业论文有学术不端行为。", size: font_size.五号)
+
+        #v(9pt)
+
+        　 　#text("☐ 本人经过尽职审查，发现毕业论文有如下学术不端行为：", size: font_size.五号)
+
+        #v(20pt)
+
+        #text(
+          "指导教师签名：　　　　 　　　　日期：　20　 年　月　日",
+          font: "SimHei",
+          size: font_size.小四,
+          weight: "bold",
+        )
+      ],
+      table.cell(colspan: 2)[
+        #set text(font: "SimHei")
+
+        #text("指导教师评语：", size: font_size.小三)
+
+        #v(290pt)
+
+        #text("签名：", size: font_size.小四, weight: "bold")
+
+        #v(-10pt)
+
+        #text("20 　年　月　日", size: font_size.小四, weight: "bold")
+      ],
+      table.cell(colspan: 2)[
+        #set text(font: "SimHei")
+        #text("答辩委员会（小组）评语：", size: font_size.小三)
+
+        #v(290pt)
+
+        #text("签名：", size: font_size.小四, weight: "bold")
+
+        #v(-10pt)
+
+        #text("20 　年　月　日", size: font_size.小四, weight: "bold")
+      ],
+      align(center + horizon)[#text("学分", weight: "bold")],
+      "",
+      align(center + horizon)[#text("成绩", weight: "bold")],
+      "",
+      table.cell(colspan: 4)[
+        #v(-8pt)
+        #text("备注：", weight: "bold", size: font_size.小四)
+      ],
+    )
+
+    #v(-2.75pt)
+
+    #grid(
+      columns: (1fr, 1fr, 1fr, 1fr),
+      align: left,
+      grid.cell(colspan: 3)[],
+      [
+        #text(" 教务处制", font: "SimHei", size: font_size.小三)
+      ],
     )
   ]
 ]

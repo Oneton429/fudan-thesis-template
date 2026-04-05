@@ -1,7 +1,7 @@
 #import "styles.typ": template
-#show: template
-
 #include "cover/cover.typ"
+
+#show: template
 #include "contents.typ"
 #include "chapters/abstract-zh.typ"
 #include "chapters/abstract-en.typ"
