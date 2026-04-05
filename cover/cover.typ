@@ -2,7 +2,6 @@
 #import "../utils.typ": font_size
 #import "@preview/cuti:0.4.0": show-fakebold
 #show: show-fakebold
-#counter(page).update(0)
 #set document(
   author: author,
   date: date,

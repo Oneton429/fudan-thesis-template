@@ -17,9 +17,7 @@
     },
     footer: context {
       let page-num = counter(page).display(here().page-numbering())
-      if counter(page).get().first() >= 1 {
-        align(center, page-num)
-      }
+      align(center, page-num)
     },
   )
   set page(numbering: "I")

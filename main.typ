@@ -1,6 +1,7 @@
 #import "styles.typ": template
 #include "cover/cover.typ"
 
+#counter(page).update(1)
 #show: template
 #include "contents.typ"
 #include "chapters/abstract-zh.typ"
