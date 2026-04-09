@@ -68,11 +68,11 @@
 
         #v(12pt)
 
-        　 　#text("☐ 本人经过尽职审查，未发现毕业论文有学术不端行为。", size: font_size.五号)
+        　 　#text("☐ 本人经过尽职审查，未发现毕业论文有学术不端行为。", font: "SimSun-ExtG", size: font_size.五号)
 
         #v(9pt)
 
-        　 　#text("☐ 本人经过尽职审查，发现毕业论文有如下学术不端行为：", size: font_size.五号)
+        　 　#text("☐ 本人经过尽职审查，发现毕业论文有如下学术不端行为：", font: "SimSun-ExtG", size: font_size.五号)
 
         #v(20pt)
 
