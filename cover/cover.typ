@@ -108,13 +108,13 @@
 
         #text("20 　年　月　日", size: font_size.小四, weight: "bold")
       ],
-      align(center + horizon)[#text("学分", weight: "bold")],
+      align(center + horizon)[#text("学分", font: "SimSun-ExtG", weight: "bold")],
       "",
-      align(center + horizon)[#text("成绩", weight: "bold")],
+      align(center + horizon)[#text("成绩", font: "SimSun-ExtG", weight: "bold")],
       "",
       table.cell(colspan: 4)[
         #v(-8pt)
-        #text("备注：", weight: "bold", size: font_size.小四)
+        #text("备注：", font: "SimSun-ExtG", weight: "bold", size: font_size.小四)
       ],
     )
 
