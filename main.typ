@@ -1,4 +1,5 @@
 #import "styles.typ": template
+#import "config.typ": chapter_num
 #include "cover/cover.typ"
 
 #counter(page).update(1)
@@ -9,7 +10,7 @@
 #set page(numbering: "1")
 #counter(page).update(1)
 
-#for chapter_id in range(1, 6) {
+#for chapter_id in range(1, chapter_num + 1) {
   include "chapters/" + numbering("01", chapter_id) + ".typ"
 }
 

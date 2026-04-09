@@ -11,7 +11,7 @@
 
 ### 2. 配置信息
 
-打开 `config.typ`，修改您的论文题目、姓名、学号及导师信息：
+打开 [`config.typ`](config.typ)，修改您的论文题目、姓名、学号及导师信息：
 ```typst
 #let title = "您的论文题目"
 #let author = "您的姓名"
@@ -19,12 +19,7 @@
 ```
 
 ### 3. 开始撰写
-在 `chapters/` 目录下按序号创建 `.typ` 文件，并在 `main.typ` 中按需包含：
-```typst
-#for chapter_id in range(1, 4) {
-  include "chapters/" + numbering("01", chapter_id) + ".typ"
-}
-```
+在 [`chapters/`](chapters/) 目录下按序号创建 `.typ` 文件，并在 [`config.typ`](config.typ) 中按需设置章节总数。
 
 参考文献使用的 BibLaTex 文件保存在 [`reference.bib`](reference.bib) 中。
 
