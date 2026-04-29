@@ -1,11 +1,11 @@
-#import "theorem-env.typ": *
+#import "../theorem-env.typ": *
 
 = 定理与证明
 
 当你需要撰写诸如“定义、定理、引理、推论、命题、注、证明”时，你需要在该章节对应的 typ 文件开头引入一行：
 
 ```typst
-#import "theorem-env.typ": *
+#import "../theorem-env.typ": *
 ```
 
 下面是一些示例：
