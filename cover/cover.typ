@@ -1,5 +1,5 @@
 #import "../config.typ": *
-#import "../utils.typ": font_size
+#import "../utils.typ": font_size, font_type
 #import "@preview/cuti:0.4.0": show-fakebold
 #show: show-fakebold
 #set document(
