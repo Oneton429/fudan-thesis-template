@@ -2,6 +2,7 @@
 #import "utils.typ": font_size, font_type
 #import "@preview/hydra:0.6.2": hydra
 #import "@preview/zh-format:0.1.0": zh-format
+#import "@preview/ctheorems:1.1.3": thmrules
 
 #let template(body) = {
   // 页眉与页码
@@ -153,5 +154,9 @@
   )
 
   show: zh-format
+  
+  // 设置 thmbox 显示格式
+  show: thmrules.with(qed-symbol: $square$)
+
   body
 }
