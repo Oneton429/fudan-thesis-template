@@ -3,6 +3,7 @@
 #import "@preview/hydra:0.6.2": hydra
 #import "@preview/zh-format:0.1.0": zh-format
 #import "@preview/ctheorems:1.1.3": thmrules
+#import "@preview/ctheorems:1.1.3": thmrules
 
 #let template(body) = {
   // 页眉与页码
