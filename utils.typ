@@ -20,7 +20,7 @@
 
 #let font_type = (
   仿宋: ((name: "Times New Roman", covers: "latin-in-cjk"), "FangSong"),
-  宋体: ((name: "Times New Roman", covers: "latin-in-cjk"), "SimSun-ExtG"),
+  宋体: ((name: "Times New Roman", covers: "latin-in-cjk"), "SimSun-ExtG", "SimSun"),
   黑体: ((name: "Times New Roman", covers: "latin-in-cjk"), "SimHei"),
   楷体: ((name: "Times New Roman", covers: "latin-in-cjk"), "KaiTi"),
   代码: (
