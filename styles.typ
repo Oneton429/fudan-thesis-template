@@ -58,6 +58,7 @@
     counter(figure.where(kind: raw)).update(0)
     counter(math.equation).update(0)
     align(center, it)
+    v(17.3pt, weak: true)
   }
   show heading.where(numbering: none): it => {
     it
@@ -154,7 +155,7 @@
   )
 
   show: zh-format
-  
+
   // 设置 thmbox 显示格式
   show: thmrules.with(qed-symbol: $square$)
 
