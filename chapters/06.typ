@@ -17,10 +17,10 @@
   A natural number is called a #highlight[_prime number_] if it is greater
   than 1 and cannot be written as the product of two smaller natural numbers.
 ]
-// #example[
-//   The numbers $2$, $3$, and $17$ are prime.
-//   @cor_largest_prime shows that this list is not exhaustive!
-// ]
+#example[
+  The numbers $2$, $3$, and $17$ are prime.
+  @cor_largest_prime shows that this list is not exhaustive!
+]
 
 #theorem("欧几里得")[
   There are infinitely many primes.
