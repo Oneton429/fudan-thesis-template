@@ -24,16 +24,26 @@
   }
 )
 
+//解决 thmbox 的缩进问题
+#let makeTheorem(kind, title) = {
+  let raw = makeThmbox(kind, title)
+
+  (..args, body) => {
+    set par(first-line-indent: (amount: 2em, all: false))
+    raw(..args)[#body]
+  }
+}
+
 // 使用示例：
 // #theorem("定理名（可选）")[定理内容]
 // 渲染效果：
 // 定理 1.1(定理名)：定理内容
-#let definition  = makeThmbox("theorem", "定义")
-#let lemma       = makeThmbox("theorem", "引理")
-#let theorem     = makeThmbox("theorem", "定理")
-#let corollary   = makeThmbox("theorem", "推论")
-#let proposition = makeThmbox("theorem", "命题")
-#let remark      = makeThmbox("theorem", "注")
+#let definition  = makeTheorem("theorem", "定义")
+#let lemma       = makeTheorem("theorem", "引理")
+#let theorem     = makeTheorem("theorem", "定理")
+#let corollary   = makeTheorem("theorem", "推论")
+#let proposition = makeTheorem("theorem", "命题")
+#let remark      = makeTheorem("theorem", "注")
 
 
 // 定义 thmproof，用于生成证明块
