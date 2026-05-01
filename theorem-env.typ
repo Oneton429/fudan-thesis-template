@@ -1,9 +1,6 @@
 #import "@preview/ctheorems:1.1.3": thmbox, thmproof, proof-bodyfmt
 #import "utils.typ": font_size, font_type
 
-// 设置编号方式
-#set heading(numbering: "1.1")
-
 // 定义一系列 thmbox，共用一套计数器
 // 例如：第一章内：定义 1.1、引理 1.2、定理 1.3、推论 1.4、注 1.5……
 #let makeThmbox(kind, title) = thmbox(
