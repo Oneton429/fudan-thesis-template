@@ -155,7 +155,7 @@
   )
 
   show: zh-format
-
+  
   // 设置 thmbox 显示格式
   show: theorem-rules
 
