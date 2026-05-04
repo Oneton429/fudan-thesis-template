@@ -53,6 +53,28 @@ typst compile main.typ  # 生成 PDF 文档
 )
 ```
 
+## 可能遇到的问题
+
+### 参考文献中的“等”和“et al.”
+
+参见：[如何修复英文参考文献中的“等”？](https://guide.typst.dev/FAQ/bib-etal-lang/)
+
+### 设置行内公式允许断行位置
+
+```typst
+#let allowbreak = math.script(math.class("binary", ""))
+```
+
+在需要断行的位置插入`#allowbreak`，或批量设置某个字符后允许断行，以半角逗号为例：
+
+```typst
+#show math.comma: it => { it + allowbreak }
+```
+
+### 没有列出？
+
+请阅读 [常见问题 | Typst 中文社区导航](https://guide.typst.dev/FAQ)
+
 ## 🤝 贡献与反馈
 
 如果您在使用过程中发现任何格式偏差或功能建议，欢迎提交 Issue 或 Pull Request。
