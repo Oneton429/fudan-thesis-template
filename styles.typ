@@ -22,6 +22,8 @@
       let page-num = counter(page).display(here().page-numbering())
       align(center, page-num)
     },
+    paper: "a4",
+    margin: (x: 3.18cm, y: 2.45cm),
   )
   set page(numbering: "I")
 
@@ -75,7 +77,9 @@
   let table-starts = state("table-starts", (:))
   let sys-table-counter = counter("sys-table-counter")
   show table: it => context {
-    if _no-table-style.get() { return it }
+    if _no-table-style.get() {
+      return it
+    }
 
     if it.children.len() > 0 and it.children.last().func() == table.hline {
       return it
@@ -155,8 +159,8 @@
   show smartquote: set text(font: "Times New Roman")
   set par(
     first-line-indent: (amount: 2em, all: true),
-    leading: (20pt - font_size.小四) * 1.265,
-    spacing: (20pt - font_size.小四) * 1.265,
+    leading: (20pt - font_size.小四) * 1.455,
+    spacing: (20pt - font_size.小四) * 1.455,
   )
 
   show: zh-format
