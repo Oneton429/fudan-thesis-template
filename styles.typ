@@ -4,6 +4,8 @@
 #import "@preview/zh-format:0.1.0": zh-format
 #import "theorem-env.typ": theorem-rules
 
+#let _no-table-style = state("_no-table-style", false)
+
 #let template(body) = {
   // 页眉与页码
   set page(
@@ -72,7 +74,9 @@
   show table: set math.equation(numbering: none)
   let table-starts = state("table-starts", (:))
   let sys-table-counter = counter("sys-table-counter")
-  show table: it => {
+  show table: it => context {
+    if _no-table-style.get() { return it }
+
     if it.children.len() > 0 and it.children.last().func() == table.hline {
       return it
     }
@@ -156,7 +160,7 @@
   )
 
   show: zh-format
-  
+
   // 设置 thmbox 显示格式
   show: theorem-rules
 
