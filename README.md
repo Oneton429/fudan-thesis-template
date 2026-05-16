@@ -71,6 +71,10 @@ typst compile main.typ  # 生成 PDF 文档
 #show math.comma: it => { it + allowbreak }
 ```
 
+### 在不该出现三线表的地方出现了三线表？
+
+请参考 [第四章](chapters/04.typ) 中的“表格样式禁用”一节
+
 ### 没有列出？
 
 请阅读 [常见问题 | Typst 中文社区导航](https://guide.typst.dev/FAQ)
