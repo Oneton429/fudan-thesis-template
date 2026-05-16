@@ -2,6 +2,11 @@
 
 #pagebreak(weak: true)
 
+#show outline: it => {
+  show heading: set text(size: font_size.二号)
+  it
+}
+
 #show outline.entry: it => {
   let is-chapter = it.level == 1
   set text(
@@ -20,7 +25,7 @@
 }
 
 #outline(
-  title: "目　录",
+  title: "目录",
   depth: 3,
 )
 

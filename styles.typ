@@ -51,7 +51,7 @@
     if pos.len() == 1 {
       "第" + numbering("一", pos.at(0)) + "章"
     } else {
-      pos.map(str).join(".")
+      pos.map(str).join(".") + sym.space.quad + h(-.3em)
     }
   })
   show heading.where(level: 1): set text(font: font_type.黑体, size: font_size.小二, weight: "regular")
@@ -64,6 +64,8 @@
     align(center, it)
     v(17.3pt, weak: true)
   }
+  show heading.where(depth: 2): set text(size: font_size.三号)
+  show heading.where(depth: 3): set text(size: font_size.小三)
   show heading.where(numbering: none): it => {
     it
     v(22pt)
@@ -72,6 +74,7 @@
   // 图表
   show figure.where(kind: table): set figure.caption(position: top)
   show figure.where(kind: table): set block(breakable: true)
+  show figure.where(kind: table): set text(size: font_size.五号)
   set figure.caption(separator: "　")
   show table: set math.equation(numbering: none)
   let table-starts = state("table-starts", (:))

@@ -11,6 +11,6 @@
 #linebreak()
 
 #grid(
-  columns: (5.3em, 1fr),
+  columns: (5em, 1fr),
   text("关键词：", font: font_type.黑体, size: font_size.小三), keywords.join("，"),
 )
