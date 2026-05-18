@@ -38,7 +38,7 @@
       row-gutter: 1.05em,
       align: left,
 
-      grid.cell(colspan: 2)[论文题目：#text(title, size: font_size.小二, weight: "bold")],
+      grid.cell(colspan: 2)[论文题目：#text(title, size: font_size.小三, weight: "bold")],
       grid.cell(colspan: 2)[],
       grid.cell(colspan: 2)[],
 
