@@ -12,5 +12,5 @@ This is the English abstract section.
 
 #grid(
   columns: (6.46em, 1fr),
-  text("Key words: ", font: "SimHei", size: font_size.小三), keywords.join(", "),
+  text("Key words: ", font: "SimHei", size: font_size.小三), keywords.join(","),
 )
