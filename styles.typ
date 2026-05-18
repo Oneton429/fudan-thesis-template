@@ -74,7 +74,7 @@
   // 图表
   show figure.where(kind: table): set figure.caption(position: top)
   show figure.where(kind: table): set block(breakable: true)
-  show figure.where(kind: table): set text(size: font_size.五号)
+  show figure: set text(size: font_size.五号)
   set figure.caption(separator: "　")
   show table: set math.equation(numbering: none)
   let table-starts = state("table-starts", (:))
