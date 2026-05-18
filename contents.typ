@@ -15,7 +15,6 @@
     size: font_size.小四,
   )
   it
-  v(12pt)
 }
 
 #outline(
