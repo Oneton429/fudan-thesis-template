@@ -8,3 +8,17 @@
 #let orginazition = "复旦大学"
 #let date = datetime.today()
 #let chapter_num = 6
+
+#let ai_statement = (
+  used: true,
+  tools: ("Gemini 3.1", "DeepSeek 3.2"),
+  platform: ("Antigrivity",),
+  functions: (
+    语法与语言表达润色: true,
+    文本结构梳理与标题建议: true,
+    图表或可视化初步生成: true,
+    代码调试思路与错误分析: true,
+    文献整理与检索建议: true,
+    其他: "",
+  ),
+)
