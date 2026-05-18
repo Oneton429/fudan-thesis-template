@@ -161,6 +161,7 @@
   // 正文字体
   set text(font: font_type.宋体, size: font_size.小四, lang: "zh", region: "cn", costs: (orphan: 0%))
   show smartquote: set text(font: "Times New Roman")
+  show math.equation: set text(features: ("cv01",)) // 宽的空集
   set par(
     first-line-indent: (amount: 2em, all: true),
     leading: (20pt - font_size.小四) * 1.475,
