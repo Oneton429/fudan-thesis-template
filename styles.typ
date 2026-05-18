@@ -65,15 +65,12 @@
     counter(figure.where(kind: table)).update(0)
     counter(figure.where(kind: raw)).update(0)
     counter(math.equation).update(0)
+    block()[#v(-4pt)]
     align(center, it)
-    v(17.3pt, weak: true)
+    v(36.5pt, weak: true)
   }
   show heading.where(depth: 2): set text(size: font_size.三号)
   show heading.where(depth: 3): set text(size: font_size.小三)
-  show heading.where(numbering: none): it => {
-    it
-    v(22pt)
-  }
 
   // 图表
   show figure.where(kind: table): set figure.caption(position: top)
