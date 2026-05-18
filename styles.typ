@@ -10,21 +10,24 @@
   // 页眉与页码
   set page(
     header: context {
-      set text(size: font_size.五号)
+      set text(size: font_size.小五)
       if counter(page).get().first() >= 1 {
         grid(
           columns: (1fr, auto),
           align(left, title), align(right, hydra(1, skip-starting: false)),
         )
-        line(length: 100%, stroke: 0.5pt)
+        v(-0.85em)
+        line(length: 100%, stroke: 0.7pt)
+        v(2.25pt)
       }
     },
     footer: context {
+      set text(size: font_size.小五)
       let page-num = counter(page).display(here().page-numbering())
       align(center, page-num)
     },
     paper: "a4",
-    margin: (x: 3.18cm, y: 2.45cm),
+    margin: (x: 3.17cm, y: 2.92cm),
   )
   set page(numbering: "I")
 
@@ -163,8 +166,8 @@
   show smartquote: set text(font: "Times New Roman")
   set par(
     first-line-indent: (amount: 2em, all: true),
-    leading: (20pt - font_size.小四) * 1.455,
-    spacing: (20pt - font_size.小四) * 1.455,
+    leading: (20pt - font_size.小四) * 1.475,
+    spacing: (20pt - font_size.小四) * 1.475,
     justify: true,
   )
 
