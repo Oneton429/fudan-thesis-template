@@ -1,4 +1,4 @@
-#import "@preview/ctheorems:1.1.3": thmbox, thmproof, proof-bodyfmt, thmrules
+#import "@preview/ctheorems:1.1.3": proof-bodyfmt, thmbox, thmproof, thmrules
 #import "utils.typ": font_size, font_type
 
 
@@ -23,16 +23,18 @@
   base_level: 1,           // 统一层级
   inset: (top: 0em),       // 统一顶部间距
   separator: [.#h(0.2em)], // 分隔符
-  namefmt: (name) => {     // 统一名称格式（加粗括号）
+  namefmt: name => {
+    // 统一名称格式（加粗括号）
     if name != none {
       set text(font: font_type.宋体, weight: "bold", size: font_size.小四)
       "(" + name + ")"
     }
   },
-  bodyfmt: (body) => {    // 统一内容 = 楷体
+  bodyfmt: body => {
+    // 统一内容 = 楷体
     set text(font: font_type.楷体, weight: "regular", size: font_size.小四)
     body
-  }
+  },
 )
 
 // 使用示例：
@@ -53,11 +55,13 @@
 // 使用示例：
 // #proof[证明过程]
 #let proof = thmproof(
-  "proof", text(style: "normal", weight: "bold")[证明], 
+  "proof",
+  text(style: "normal", weight: "bold")[证明],
   inset: (top: 0em),       // 统一顶部间距
   separator: [.#h(0.2em)], // 分隔符
-  bodyfmt: (body) => {    // 统一内容 = 楷体
+  bodyfmt: body => {
+    // 统一内容 = 楷体
     set text(font: font_type.宋体, weight: "regular", size: font_size.小四)
     proof-bodyfmt(body)
-  }
+  },
 )

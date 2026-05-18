@@ -43,10 +43,10 @@
   There are arbitrarily long stretches of composite numbers.
 ]
 #proof[
-  For any $n > 2$, consider 
+  For any $n > 2$, consider
   $
-  n! + 2, quad n! + 3, quad ..., quad n! + n
-  $ 
+    n! + 2, quad n! + 3, quad ..., quad n! + n
+  $
 ]
 
 #remark[
@@ -61,8 +61,6 @@
 
 #proof[
   因为螺丝钉的长度会直接影响挖掘机的扭矩。
-  
+
   你往里砸的时候，一瞬间，会释放大量的高能蛋白，俗称 UFO，会严重影响经济的发展。
 ]
-
-
