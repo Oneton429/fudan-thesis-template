@@ -14,19 +14,14 @@
     weight: if is-chapter { "bold" } else { "regular" },
     size: font_size.小四,
   )
-  link(
-    it.element.location(),
-    it.indented(
-      it.prefix(),
-      [#it.body() #box(width: 1fr, if not is-chapter { it.fill }) #it.page()],
-    ),
-  )
+  it
   v(12pt)
 }
 
 #outline(
   title: "目录",
   depth: 3,
+  indent: depth => calc.max(0, depth - 1) * 1em,
 )
 
 #pagebreak(weak: true)
