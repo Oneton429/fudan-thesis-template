@@ -10,6 +10,7 @@
   // 页眉与页码
   set page(
     header: context {
+      set text(size: font_size.五号)
       if counter(page).get().first() >= 1 {
         grid(
           columns: (1fr, auto),
@@ -74,7 +75,7 @@
   // 图表
   show figure.where(kind: table): set figure.caption(position: top)
   show figure.where(kind: table): set block(breakable: true)
-  show figure: set text(size: font_size.五号)
+  show figure.where(kind: table): set text(size: font_size.五号)
   set figure.caption(separator: "　")
   show table: set math.equation(numbering: none)
   let table-starts = state("table-starts", (:))
@@ -164,6 +165,7 @@
     first-line-indent: (amount: 2em, all: true),
     leading: (20pt - font_size.小四) * 1.455,
     spacing: (20pt - font_size.小四) * 1.455,
+    justify: true,
   )
 
   show: zh-format
