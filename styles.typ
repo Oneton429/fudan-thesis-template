@@ -168,6 +168,8 @@
     spacing: (20pt - font_size.小四) * 1.475,
     justify: true,
   )
+  // 脚注字体
+  show footnote.entry: set text(size: font_size.小五)
 
   show: zh-format
 
