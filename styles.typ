@@ -1,7 +1,7 @@
 #import "config.typ": *
 #import "utils.typ": font_size, font_type
 #import "@preview/hydra:0.6.2": hydra
-#import "@preview/zh-format:0.1.0": zh-format
+#import "@preview/cuti:0.4.0": show-cn-fakebold, show-cn-fakeitalic
 #import "theorem-env.typ": theorem-rules
 
 #let _no-table-style = state("_no-table-style", false)
@@ -171,7 +171,21 @@
   // 脚注字体
   show footnote.entry: set text(size: font_size.小五)
 
-  show: zh-format
+  show: show-cn-fakebold
+  show: show-cn-fakeitalic
+
+  show underline: it => context {
+    let line_width = measure(it.body).width
+    box[
+      #set par(first-line-indent: 0em)
+      #it.body
+      #place(
+        bottom + left,
+        dy: 0.15em,
+        line(length: line_width, stroke: 0.05em),
+      )
+    ]
+  }
 
   // 设置 thmbox 显示格式
   show: theorem-rules
