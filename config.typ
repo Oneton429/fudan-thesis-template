@@ -12,7 +12,7 @@
 #let ai_statement = (
   used: true,
   tools: ("Gemini 3.1", "DeepSeek 3.2"),
-  platform: ("Antigrivity",),
+  platform: ("Antigravity",),
   functions: (
     语法与语言表达润色: true,
     文本结构梳理与标题建议: true,
