@@ -13,6 +13,7 @@
 #set text(top-edge: "ascender", bottom-edge: "descender")
 #let 宋体 = ("SimSun-ExtG", "SimSun")
 #let 黑体 = ("SimHei",)
+#let 仿宋 = ("FangSong_GB2312", "FangSong")
 
 #v(35pt)
 #image(
@@ -57,7 +58,7 @@
 #page(
   background: image("AI.pdf", page: 1),
 )[
-  #set text(size: font_size.三号)
+  #set text(font: 仿宋, size: font_size.三号)
   #if ai_statement.used {
     place("✔", dx: 50%, dy: 38.3%)
     place(
@@ -105,7 +106,7 @@
 #page(
   background: image("AI.pdf", page: 2),
 )[
-  #set text(size: font_size.三号)
+  #set text(font: 仿宋, size: font_size.三号)
   #place(date.display("[year]"), dx: 66.6%, dy: 85.4%)
   #place(date.display("[month padding:none]"), dx: 82.7%, dy: 85.4%)
   #place(date.display("[day padding:none]"), dx: 91.5%, dy: 85.4%)
