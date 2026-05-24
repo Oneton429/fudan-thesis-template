@@ -24,13 +24,15 @@
   #image("../cover/badge.jpg")
 ]
 
-如遇表格标题与表格内容完全分开的情况，请手动插入
+三线表需要手动指定header内容；如遇表格标题与表格内容完全分开的情况，请手动插入
 
 ```typst
 #pagebreak(weak: true)
 ```
 
 来将标题换页至下一页。
+
+*注*：请勿在表格的`table.header`前和内容最后设置`table.hline`，否则会导致三线表格式错误。
 
 #figure(caption: "测试表格")[
   #table(
@@ -47,14 +49,6 @@
     ],
 
     "正四面体", $ sqrt(2) / 12 a^3 $, [$a$: edge length],
-    "圆柱",
-    $ pi h (D^2 - d^2) / 4 $,
-    [
-      $h$: height \
-      $D$: outer radius \
-      $d$: inner radius
-    ],
-
     "圆柱",
     $ pi h (D^2 - d^2) / 4 $,
     [
