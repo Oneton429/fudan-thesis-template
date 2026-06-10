@@ -5,7 +5,7 @@
 #let major = "计算机科学与技术"
 #let instructor = "李四"
 #let instructor_type = "教授"
-#let orginazition = "复旦大学"
+#let orginazition = "复旦大学计算与智能创新学院"
 #let date = datetime.today()
 #let chapter_num = 6
 
